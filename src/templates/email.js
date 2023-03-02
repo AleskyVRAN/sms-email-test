@@ -156,7 +156,7 @@ exports.users_html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/
                     Créditos restablecidos hoy: 
                     <br/>
                     <strong style="color:#14477e;margin-bottom:25px">
-                    {{restituidos}}
+                    {{restituidos_total}}
                     </strong><br/><br/>
                     Reporte del: {{fecha}}, <br/>Ciudad de México
                     <br/><br/>
@@ -191,6 +191,35 @@ exports.users_html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/
                     </td>
                     <td style="border-left: 1px solid #f2f6f7;background: #fff; border-right: 1px solid #f2f6f7; color:#67757c; font-weight: 600; padding: 8px;">
                     {{restituidos}}
+                    </td>
+                    </tr></tbody></table>
+                    <br/><br>
+                    
+                    <table summary="estadisticas" style="border-bottom:1px solid #f2f6f7;border-collapse:collapse;border-top:1px solid #f2f6f7;margin:auto;text-align:center;max-width:100%"><thead><tr>
+                    <th scope="col" style="background:#f2f6f7;color:#6b8a99;font-weight:400;padding:8px;text-align:center; width:155px;">
+                    Mensajes de Whatsapp<br />totales
+                    </th>
+                    <th scope="col" style="background:#f2f6f7;color:#6b8a99;font-weight:400;padding:8px;text-align:center; width:155px;">
+                    Entrega de Whatsapp <br />confirmada
+                    </th>
+                    <th scope="col" style="background:#f2f6f7;color:#6b8a99;font-weight:400;padding:8px;text-align:center; width:155px;">
+                    Mensajes de Whatsapp <br />fallidos
+                    </th>
+                    <th scope="col" style="background:#f2f6f7;color:#6b8a99;font-weight:400;padding:8px;text-align:center; width:155px;">
+                    Mensajes de Whatsapp <br /> no cobrados
+                    </th>
+                    </tr></thead><tbody><tr>
+                    <td style="border-left: 1px solid #f2f6f7;background: #fff; border-right: 1px solid #f2f6f7; color:#14477e; font-weight: 600; padding: 8px">
+                    {{total_wa}}
+                    </td>
+                    <td style="border-left: 1px solid #f2f6f7;background: #fff; border-right: 1px solid #f2f6f7; color:#78c89e; font-weight: 600; padding: 8x;">
+                    {{entregados_wa}}
+                    </td>
+                    <td style="border-left: 1px solid #f2f6f7;background: #fff; border-right: 1px solid #f2f6f7; color:#eb5653; font-weight: 600; padding: 8px;">
+                    {{fallidos_wa}}
+                    </td>
+                    <td style="border-left: 1px solid #f2f6f7;background: #fff; border-right: 1px solid #f2f6f7; color:#67757c; font-weight: 600; padding: 8px;">
+                    {{restituidos_wa}}
                     </td>
                     </tr></tbody></table>
                     <br/><br>
@@ -427,7 +456,7 @@ exports.dists_html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/
                   Créditos restablecidos hoy: 
                   <br/>
                   <strong style="color:#14477e;margin-bottom:25px">
-                  {{restituidos}}
+                  {{restituidos_total}}
                   </strong><br/><br/>
                   Reporte del: {{fecha}}, <br/>Ciudad de México
                   <br/><br/>
@@ -474,9 +503,11 @@ exports.dists_html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/
                   {{restituidos}}
                   </td>
                   </tr>
-                  
+
+
                   <!-- END TOTAL ROW -->
                   </tbody></table>
+                  
                   <br/><br>
                   <table summary="creditos" style="border-bottom:1px solid #f2f6f7;border-collapse:collapse;border-top:1px solid #f2f6f7;margin:auto;text-align:center;max-width:100%"><thead><tr>
                   <th scope="col" style="background:#f2f6f7;color:#6b8a99;font-weight:400;padding:8px;text-align:center; width:104px;">
